@@ -7,6 +7,6 @@ import (
 // Thing belongs to List
 type Thing struct {
 	gorm.Model
-	Title  string
-	ListID uint
+	Title  string `json:"title" binding:"required"`
+	ListID uint   `json:"list_id" binding:"required"`
 }
